@@ -44,13 +44,9 @@ bat label: 'Test running', script: '''mvn test'''
 stage('SonarQube'){
 
 steps{
-
-bat label: '', script: '''mvn sonar:sonar\
-
--Dsonar.host.url=http://localhost:9000\
-
--Dsonar.login=f7f469bb4b1e6f44f1a291724cbe9cdf247d2408'''
-
+bat label: '', script: '''mvn sonar:sonar \
+-Dsonar.host.url=http://localhost:9000 \
+-Dsonar.login=squ_f7f469bb4b1e6f44f1a291724cbe9cdf247d2408'''
 }
 
 }
