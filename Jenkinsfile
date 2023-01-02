@@ -53,6 +53,15 @@ bat label: 'Project packaging', script: '''mvn package'''
 }
 
 }
+stage('java execution'){
+
+steps{
+
+java Runner.java
+javac Runner
+}
+}
+
 stage('Generate Cucumber report') {
             steps{
                  cucumber buildStatus: 'UNSTABLE',
