@@ -54,13 +54,13 @@ bat label: 'Project packaging', script: '''mvn package'''
 
 }
 
-
+stage('Generate Cucumber report'){
 post {
        always {
            cucumber '**/cucumber.json'
        }
    }
-  
+ }
 
   }
 
